@@ -7,6 +7,7 @@ curl --include --request POST http://localhost:4741/workouts \
       "day": "Monday",
       "exercise": "straight leg raises",
       "sets": "3",
-      "reps": "12"
+      "reps": "12",
+      "user_id": "3"
     }
   }'
