@@ -1,5 +1,6 @@
 class WorkoutsController < ProtectedController
   before_action :authenticate
+  before_action :set_workout, only: %i[update destroy]
 
   # GET /workouts
   def index
