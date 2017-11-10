@@ -3,7 +3,7 @@ class GoalsController < OpenReadController
 
   # GET /goals
   def index
-    @goals = Goal.all
+    @goals = Goal.where(week: params[:week])
 
     render json: @goals
   end
