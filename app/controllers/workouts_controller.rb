@@ -4,8 +4,8 @@ class WorkoutsController < ProtectedController
 
   # GET /workouts
   def index
-    @workouts = Workout.where(:user_id => current_user.id)
     @workouts = Workout.where(week: params[:week])
+                       .where(user_id: current_user.id)
 
     render json: @workouts
   end
