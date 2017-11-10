@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :users, only: %i[index show]
   resources :workouts, except: %i[new edit]
   resources :exercises, only: %i[index show]
+  resources :goals, only: %i[index show]
 end
