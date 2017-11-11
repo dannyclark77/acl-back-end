@@ -45,7 +45,8 @@ class GoalsController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_goal
-      @goal = Goal.find(params[:id])
+      # @goal = Goal.find(params[:id])
+      @goal = current_user.goals.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
